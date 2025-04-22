@@ -7,12 +7,17 @@
         <div id="hmslidertop" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active ">
+
                     <div class="img">
-                        <img src="{% static '' %}img/slidernew/Wadhwa-Tulip-Desk-Slider-Banner.jpg" class="d-lg-block d-none w-100 maining" alt="3bhk flats in kharadi">
-                        <img src="{% static '' %}img/slidernew/Wadhwa-Tulip-Mobile-Slider-Banner.jpg" class="d-lg-none d-block w-100 maining" alt="3bhk flats in kharadi">
+                        {% for rs in slider %}
+                        <img src="{{rs.slider.url}}" class="d-lg-block d-none w-100 maining" alt="3bhk flats in kharadi">
+                        <img src="{{rs.slider.url}}" class="d-lg-none d-block w-100 maining" alt="3bhk flats in kharadi">
+                        {% endfor %}
+                        
                         <!--img src="img/slidernew/wadhwadesk.jpg" class="d-lg-block d-none w-100 maining" alt="3bhk flats in kharadi">
             <img src="img/slidernew/wadhwamob.jpg" class="d-lg-none d-block w-100 maining" alt="3bhk flats in kharadi" -->
                     </div>
+                    
                 </div>
             </div>
             <!-- <div class="arrowslide">
@@ -39,9 +44,11 @@
                             <img src="{% static '' %}img/elepeacockgreen.png" class="img-fluid largetitleimg">
                         </div>
                     </div>
+                    
                     <div class="{% static '' %}img my-3 d-lg-none d-block" data-aos="fade-up" data-aos-duration="3000">
                         <img src="{% static '' %}img/about.jpg" alt="3bhk apartments in kharadi" class="img-fluid" style="border: 1.5px solid #000;">
                     </div>
+           
                     <p class="textstyle text-center maguspara" data-aos="fade-up" data-aos-duration="3000">
                         Presenting The Wadhwa Wise City in Panvel, an integrated township project spread across 200+ acres, part of a 450-acre land parcel to be developed by The Wadhwa Group. Wadhwa Wise City is a vision of sustainable growth and holds the distinction of being
                         the first-ever integrated township project in NAINA (Navi Mumbai Airport Influence Notified Area).
@@ -53,8 +60,10 @@
                 </div>
                 <div class="col-lg-6 d-lg-block d-none">
                     <div class="img">
-                        <img src="{% static '' %}img/about.jpg" alt="" width="100%" class="img-fluid" style="border: 1.5px solid #000;" data-aos="fade-up" data-aos-duration="3000">
-                    </div>
+                      {% for rs in Oveview %}
+                        <img src="{{rs.overview.url}}" alt="" width="100%" class="img-fluid" style="border: 1.5px solid #000;" data-aos="fade-up" data-aos-duration="3000">
+                        {% endfor %}
+                      </div>
                 </div>
             </div>
         </div>
